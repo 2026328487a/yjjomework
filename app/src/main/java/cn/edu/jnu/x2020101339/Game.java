@@ -10,13 +10,14 @@ public class Game {
 
     public int score() {
         int total=0;
-        for(int j = 0; j<rolls.length; j++){
-            if(j%2==1) {
-                if (rolls[j - 1] + rolls[j] == 10) {
-                    total += rolls[j + 1];
-                }
+        int current=0;
+        for(int j = 0; j<10; j++){
+            if(rolls[current]+rolls[current+1]==10){
+                total=10+rolls[current+1];
             }
-            total+=rolls[j];
+            else if(rolls[current]==10){
+                total=10+rolls[current+1]+rolls[current+2];
+            }
         }
         return total;
     }

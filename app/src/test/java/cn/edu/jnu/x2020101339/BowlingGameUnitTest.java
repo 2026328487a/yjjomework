@@ -50,4 +50,13 @@ public class BowlingGameUnitTest {
         game.roll(3);
         game.roll(7);
     }
+    public void  test4() throws Exception {
+        setUp();
+        game.roll(10);
+        game.roll(4);
+        game.roll(4);
+        roll(1, 16);
+
+        assertEquals(42, game.score());
+    }
 }
