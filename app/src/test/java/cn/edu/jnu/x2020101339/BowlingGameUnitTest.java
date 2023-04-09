@@ -26,6 +26,7 @@ public class BowlingGameUnitTest {
 
         assertEquals(20, game.score());
     }
+    @Test
     public void  test2() throws Exception {
         setUp();
         roll(3, 20);
@@ -38,6 +39,7 @@ public class BowlingGameUnitTest {
             game.roll(k);
         }
     }
+    @Test
     public void  test3() throws Exception {
         setUp();
         rollspare();
@@ -50,6 +52,7 @@ public class BowlingGameUnitTest {
         game.roll(3);
         game.roll(7);
     }
+    @Test
     public void  test4() throws Exception {
         setUp();
         rollstrike();
@@ -64,6 +67,7 @@ public class BowlingGameUnitTest {
         game.roll(10);
     }
 
+    @Test
     public void  test5() throws Exception {
         setUp();
         roll(10, 12);

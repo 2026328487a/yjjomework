@@ -11,18 +11,19 @@ public class Game {
     public int score() {
         int total=0;
         int current=0;
-        while(true){
-            if(isaBoolean(current)){
+        for(int j=0;j<10;j++){
+            if(isasqare(current)){
                 total=10+rolls[current+2]+total;
                 current=current+2;
             }
             else if(isstrike(current)){
                 total=10+rolls[current+1]+rolls[current+2]+total;
-                current=current++;
+                current=current+1;
             }
             else{
                 total=rolls[current]+rolls[current+1]+total;
                 current=current+2;
+
             }
             if(isend(current)){break;}
         }
@@ -30,14 +31,14 @@ public class Game {
     }
 
     private boolean isend(int current) {
-        return current > 19;
+        return current > k-1;
     }
 
     private boolean isstrike(int current) {
         return rolls[current] == 10;
     }
 
-    private boolean isaBoolean(int current) {
+    private boolean isasqare(int current) {
         return rolls[current] + rolls[current + 1] == 10;
     }
 }
