@@ -38,4 +38,16 @@ public class BowlingGameUnitTest {
             game.roll(k);
         }
     }
+    public void  test3() throws Exception {
+        setUp();
+        rollspare();
+        roll(1, 18);
+
+        assertEquals(29, game.score());
+    }
+
+    private void rollspare() {
+        game.roll(3);
+        game.roll(7);
+    }
 }
