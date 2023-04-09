@@ -52,11 +52,22 @@ public class BowlingGameUnitTest {
     }
     public void  test4() throws Exception {
         setUp();
-        game.roll(10);
+        rollstrike();
         game.roll(4);
         game.roll(4);
         roll(1, 16);
 
         assertEquals(42, game.score());
+    }
+
+    private void rollstrike() {
+        game.roll(10);
+    }
+
+    public void  test5() throws Exception {
+        setUp();
+        roll(10, 12);
+
+        assertEquals(300, game.score());
     }
 }
