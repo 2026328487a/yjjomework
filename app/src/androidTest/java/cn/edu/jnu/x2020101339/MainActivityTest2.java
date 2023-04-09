@@ -30,14 +30,14 @@ import org.junit.runner.RunWith;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTest {
+public class MainActivityTest2 {
 
     @Rule
     public ActivityScenarioRule<MainActivity> mActivityScenarioRule =
             new ActivityScenarioRule<>(MainActivity.class);
 
     @Test
-    public void mainActivityTest() {
+    public void mainActivityTest2() {
         ViewInteraction appCompatEditText = onView(
                 allOf(withId(R.id.editTextTextPersonName),
                         childAtPosition(
@@ -59,7 +59,7 @@ public class MainActivityTest {
         materialButton.perform(click());
 
         ViewInteraction textView = onView(
-                allOf(withId(R.id.textView), withText("Total score is:"),
+                allOf(withId(R.id.textView), withText("Total score is:49"),
                         withParent(withParent(withId(android.R.id.content))),
                         isDisplayed()));
         textView.check(matches(withText("Total score is:49")));
